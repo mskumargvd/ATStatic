@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDA with Python Program Syllabus - Agnidhra Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .syllabus-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .syllabus-section li {
+            padding-left: 1.75rem;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        .syllabus-section li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ff7f50;
+            font-weight: bold;
+            font-size: 1.25rem;
+            top: -2px;
+        }
+        .topic-description {
+            margin-left: 1.75rem;
+            font-size: 0.9rem;
+            color: #4b5563;
+            border-left: 2px solid #e5e7eb;
+            padding-left: 1rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-4xl mx-auto p-8 md:p-12 bg-white my-8 shadow-lg">
+        <div class="flex items-center justify-between pb-8 border-b">
+            <div class="flex items-center"><img src="logo.png" alt="Agnidhra Technologies Logo" class="w-16 h-16 rounded-full mr-4"><div><h1 class="text-3xl font-bold text-gray-800">Agnidhra Technologies</h1><p class="text-gray-500">Professional Training Programs</p></div></div>
+            <div class="text-right"><h2 class="text-4xl font-bold text-[#ff7f50]">Data Analytics with Python</h2><p class="font-semibold text-gray-600">3-Month Foundational Program Syllabus</p></div>
+        </div>
+        <div class="syllabus-section mt-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-[#ff7f50] pl-4">Month 1: Foundations of Data Handling</h3>
+            <div class="pl-6">
+                <h4 class="text-xl font-semibold text-gray-700 mb-4">Week 1-2: Data Manipulation with Pandas</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Intro to Jupyter Notebooks. Master the DataFrame, read from CSVs, and learn selecting, filtering, and sorting data.</p><p class="module-lab">Lab: Load and inspect a real-world dataset like the Titanic dataset.</p></div>
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 3: Data Cleaning and Preprocessing</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Tackle the most critical step of data analysis: handling missing values, correcting data types, and removing duplicates.</p><p class="module-lab">Lab: Take a messy, raw dataset and perform a full data cleaning process.</p></div>
+                 <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 4: Numerical Computing with NumPy</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Learn the fundamentals of the NumPy library for efficient numerical and mathematical operations on large datasets.</p><p class="module-lab">Lab: Solve a series of mathematical and logical problems on NumPy arrays.</p></div>
+            </div>
+        </div>
+        <div class="syllabus-section mt-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-[#ff7f50] pl-4">Month 2: Visualizing Data and Finding Insights</h3>
+            <div class="pl-6">
+                <h4 class="text-xl font-semibold text-gray-700 mb-4">Week 5-6: Data Visualization with Matplotlib & Seaborn</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Create a wide range of plots, from basic bar charts and histograms to advanced statistical visualizations like heatmaps and box plots.</p><p class="module-lab">Lab: Create a bar chart of survival rate by gender and a heatmap of feature correlations for the Titanic dataset.</p></div>
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 7: Data Aggregation and Grouping</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Master the powerful `.groupby()` function in Pandas to segment and analyze data by categories.</p><p class="module-lab">Lab: Calculate the average age and survival rate for passengers in each class of the Titanic dataset.</p></div>
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 8: Merging and Joining Datasets</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Learn to combine data from multiple sources using different types of joins (`inner`, `outer`, `left`, `right`) to create a master dataset for analysis.</p><p class="module-lab">Lab: Merge two separate datasets (e.g., orders and customers) into a single master table.</p></div>
+            </div>
+        </div>
+        <div class="syllabus-section mt-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-[#ff7f50] pl-4">Month 3: Advanced Techniques & Capstone</h3>
+            <div class="pl-6">
+                <h4 class="text-xl font-semibold text-gray-700 mb-4">Week 9-10: Feature Engineering & Time Series</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Create new, insightful features from existing data. Learn the basics of analyzing time-stamped data, including resampling and rolling windows.</p><p class="module-lab">Lab: Analyze a stock price dataset to calculate and plot its 30-day moving average.</p></div>
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 11-12: Capstone Project</h4>
+                <div class="module"><p class="module-title">Capstone Project:</p><p class="module-topics">Perform a full exploratory data analysis on a real-world dataset (e.g., retail sales or Zomato restaurants). You will clean the data, analyze it, create compelling visualizations, and present your findings in a comprehensive Jupyter Notebook report.</p><p class="module-lab">Career Prep: Discussion on the roles of a Data Analyst and Data Scientist and how to present a data project in an interview.</p></div>
+            </div>
+        </div>
+        <div class="no-print mt-12 text-center text-gray-500 text-sm"><p>This document was generated for a student of Agnidhra Technologies. &copy; 2025. All Rights Reserved.</p></div>
+    </div>
+</body>
+</html>

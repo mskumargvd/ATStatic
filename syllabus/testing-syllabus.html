@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Testing & QA Program Syllabus - Agnidhra Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .syllabus-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .syllabus-section li {
+            padding-left: 1.75rem;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        .syllabus-section li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ff7f50;
+            font-weight: bold;
+            font-size: 1.25rem;
+            top: -2px;
+        }
+        .topic-description {
+            margin-left: 1.75rem;
+            font-size: 0.9rem;
+            color: #4b5563;
+            border-left: 2px solid #e5e7eb;
+            padding-left: 1rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-4xl mx-auto p-8 md:p-12 bg-white my-8 shadow-lg">
+        <div class="flex items-center justify-between pb-8 border-b">
+            <div class="flex items-center"><img src="logo.png" alt="Agnidhra Technologies Logo" class="w-16 h-16 rounded-full mr-4"><div><h1 class="text-3xl font-bold text-gray-800">Agnidhra Technologies</h1><p class="text-gray-500">Professional Training Programs</p></div></div>
+            <div class="text-right"><h2 class="text-4xl font-bold text-[#ff7f50]">Software Testing & QA</h2><p class="font-semibold text-gray-600">6-Month Professional Program Syllabus</p></div>
+        </div>
+        <div class="syllabus-section mt-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-[#ff7f50] pl-4">Part 1: The QA Foundation (Months 1-2)</h3>
+            <div class="pl-6">
+                <h4 class="text-xl font-semibold text-gray-700 mb-4">Month 1: Manual Testing & Agile Methodologies</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">The SDLC vs. STLC. Test planning, test case design, and execution. Defect life cycle and professional bug reporting using Jira. Introduction to Agile and Scrum methodologies.</p><p class="module-lab">Project: Manually test a demo e-commerce website, identify 10-15 bugs, and write professional bug reports in a Jira project.</p></div>
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Month 2: Database & API Testing</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Mastering SQL for backend data validation. In-depth manual API testing using Postman to test endpoints, validate responses, and manage collections.</p><p class="module-lab">Project: Use Postman to test the full CRUD functionality of a sample REST API. Write SQL queries to verify that the API calls correctly updated the database.</p></div>
+            </div>
+        </div>
+        <div class="syllabus-section mt-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-[#ff7f50] pl-4">Part 2: The Automation Engineer's Toolkit (Months 3-4)</h3>
+            <div class="pl-6">
+                <h4 class="text-xl font-semibold text-gray-700 mb-4">Month 3: Introduction to Test Automation with Selenium</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Introduction to Python for test automation. Setting up Selenium WebDriver. Mastering Selenium locators (ID, Name, XPath, CSS Selectors) to find web elements. Automating common user actions.</p><p class="module-lab">Project: Write Selenium scripts in Python to automate the user registration and login process of a demo web application.</p></div>
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Month 4: Building a Test Automation Framework</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Introduction to the Page Object Model (POM) for creating reusable test code. Using a testing framework like Pytest to structure tests, run assertions, and generate reports.</p><p class="module-lab">Project: Convert the Selenium scripts from the previous month into a structured test automation framework using the Page Object Model and Pytest.</p></div>
+            </div>
+        </div>
+        <div class="syllabus-section mt-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-[#ff7f50] pl-4">Part 3: Advanced Specializations & Capstone (Months 5-6)</h3>
+            <div class="pl-6">
+                <h4 class="text-xl font-semibold text-gray-700 mb-4">Month 5: Performance & Intro to Security Testing</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Fundamentals of Performance Testing (Load, Stress). Creating test scripts with Apache JMeter to simulate user load. Introduction to Security Testing fundamentals, focusing on the OWASP Top 10.</p><p class="module-lab">Project: Create a JMeter test plan to apply a load of 100 virtual users to a demo application's login page and analyze the results.</p></div>
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Month 6: Capstone: Testing in a CI/CD Pipeline</h4>
+                <div class="module"><p class="module-title">Capstone Project:</p><p class="module-topics">Integrate and Run Automated Tests in a DevOps Pipeline. Configure a Jenkins pipeline to automatically check out code from GitHub and run your Pytest/Selenium automation suite. If tests pass, the pipeline proceeds; if they fail, the pipeline stops and sends a notification.</p><p class="module-lab">Career Prep: Deep dive into QA interview questions (manual, automation, SQL, and behavioral). Resume and LinkedIn optimization to highlight your new automation skills.</p></div>
+            </div>
+        </div>
+        <div class="no-print mt-12 text-center text-gray-500 text-sm"><p>This document was generated for a student of Agnidhra Technologies. &copy; 2025. All Rights Reserved.</p></div>
+    </div>
+</body>
+</html>

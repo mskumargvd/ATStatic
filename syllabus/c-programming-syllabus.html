@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming Program Syllabus - Agnidhra Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .syllabus-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .syllabus-section li {
+            padding-left: 1.75rem;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        .syllabus-section li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ff7f50;
+            font-weight: bold;
+            font-size: 1.25rem;
+            top: -2px;
+        }
+        .topic-description {
+            margin-left: 1.75rem;
+            font-size: 0.9rem;
+            color: #4b5563;
+            border-left: 2px solid #e5e7eb;
+            padding-left: 1rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-4xl mx-auto p-8 md:p-12 bg-white my-8 shadow-lg">
+        <div class="flex items-center justify-between pb-8 border-b">
+            <div class="flex items-center"><img src="logo.png" alt="Agnidhra Technologies Logo" class="w-16 h-16 rounded-full mr-4"><div><h1 class="text-3xl font-bold text-gray-800">Agnidhra Technologies</h1><p class="text-gray-500">Professional Training Programs</p></div></div>
+            <div class="text-right"><h2 class="text-4xl font-bold text-[#ff7f50]">C Programming</h2><p class="font-semibold text-gray-600">3-Month Foundational Program Syllabus</p></div>
+        </div>
+        <div class="syllabus-section mt-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-[#ff7f50] pl-4">Month 1: Programming Fundamentals</h3>
+            <div class="pl-6">
+                <h4 class="text-xl font-semibold text-gray-700 mb-4">Week 1-2: Core Concepts & Control Flow</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Set up your C compiler (GCC), learn variables, data types, operators, and master conditional logic with `if-else` and `switch-case` statements.</p><p class="module-lab">Lab: Write a program that prints a student's grade based on their marks.</p></div>
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 3: Loops and Functions</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Understand and implement `for`, `while`, and `do-while` loops. Learn to write modular, reusable code with functions (pass-by-value).</p><p class="module-lab">Lab: Create a modular calculator where each operation is a separate function.</p></div>
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 4: Pointers & Memory</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Dive into the most powerful feature of C. Understand memory addresses, the dereference operator (`*`), and pass-by-reference.</p><p class="module-lab">Lab: Write a function that swaps the values of two variables using pointers.</p></div>
+            </div>
+        </div>
+        <div class="syllabus-section mt-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-[#ff7f50] pl-4">Month 2: Arrays, Strings, and Structures</h3>
+            <div class="pl-6">
+                <h4 class="text-xl font-semibold text-gray-700 mb-4">Week 5-6: Arrays and Strings</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Master one-dimensional arrays, multi-dimensional arrays (matrices), and the relationship between arrays and pointers. Learn to manipulate null-terminated strings.</p><p class="module-lab">Lab: Write a program to find the largest number in an array and another to check for palindromes.</p></div>
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 7-8: Structures (`struct`)</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Create your own custom data types. Learn to work with arrays of structures and pointers to structures to manage complex data.</p><p class="module-lab">Lab: Create a `struct` to store student data and manage an array of student records.</p></div>
+            </div>
+        </div>
+        <div class="syllabus-section mt-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-[#ff7f50] pl-4">Month 3: Advanced Topics & Capstone</h3>
+            <div class="pl-6">
+                <h4 class="text-xl font-semibold text-gray-700 mb-4">Week 9: Dynamic Memory Allocation</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Go beyond static memory. Master `malloc()`, `calloc()`, and `free()` to manage memory at runtime and avoid memory leaks.</p><p class="module-lab">Lab: Rework the student records project to handle any number of students dynamically.</p></div>
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 10-12: File I/O & Capstone Project</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Learn to read data from and write data to text files, allowing your programs to persist information.</p><p class="module-lab">Capstone Project: Build a "Simple Contact Management System" that can add, view, and search contacts, and save/load the contact list to a file. This project combines structures, pointers, dynamic memory, and file handling.</p></div>
+            </div>
+        </div>
+        <div class="no-print mt-12 text-center text-gray-500 text-sm"><p>This document was generated for a student of Agnidhra Technologies. &copy; 2025. All Rights Reserved.</p></div>
+    </div>
+</body>
+</html>

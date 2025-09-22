@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database & Networking Syllabus - Agnidhra Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .syllabus-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .syllabus-section li {
+            padding-left: 1.75rem;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        .syllabus-section li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ff7f50;
+            font-weight: bold;
+            font-size: 1.25rem;
+            top: -2px;
+        }
+        .topic-description {
+            margin-left: 1.75rem;
+            font-size: 0.9rem;
+            color: #4b5563;
+            border-left: 2px solid #e5e7eb;
+            padding-left: 1rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-4xl mx-auto p-8 md:p-12 bg-white my-8 shadow-lg">
+        <div class="flex items-center justify-between pb-8 border-b">
+            <div class="flex items-center"><img src="logo.png" alt="Agnidhra Technologies Logo" class="w-16 h-16 rounded-full mr-4"><div><h1 class="text-3xl font-bold text-gray-800">Agnidhra Technologies</h1><p class="text-gray-500">Professional Training Programs</p></div></div>
+            <div class="text-right"><h2 class="text-4xl font-bold text-[#ff7f50]">Database & Networking</h2><p class="font-semibold text-gray-600">3-Month Foundational Program Syllabus</p></div>
+        </div>
+        <div class="syllabus-section mt-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-[#ff7f50] pl-4">Month 1: Computer Networking Essentials</h3>
+            <div class="pl-6">
+                <h4 class="text-xl font-semibold text-gray-700 mb-4">Week 1-2: Core Networking & The TCP/IP Model</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">LANs vs WANs, Client-Server Model, the 7 Layers of the OSI Model, the 4 Layers of the TCP/IP Model, Encapsulation. Hands-on with Wireshark.</p><p class="module-lab">Lab: Capture network traffic to identify different protocol layers.</p></div>
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 3: IP Addressing and Subnetting</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">IPv4 addresses, Public vs. Private IPs, Address Classes, and the fundamentals of subnetting. Introduction to CIDR notation.</p><p class="module-lab">Lab: Design an IP addressing scheme for a small company network.</p></div>
+                 <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 4: Essential Network Protocols</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Deep dive into how the web works with HTTP/HTTPS, DNS (the phonebook of the internet), and DHCP. Difference between TCP and UDP.</p><p class="module-lab">Lab: Use command-line tools like `ping`, `nslookup`, and `traceroute` to diagnose network issues.</p></div>
+            </div>
+        </div>
+        <div class="syllabus-section mt-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-[#ff7f50] pl-4">Month 2: Relational Databases & SQL</h3>
+            <div class="pl-6">
+                <h4 class="text-xl font-semibold text-gray-700 mb-4">Week 5-6: SQL Fundamentals (DDL & DML)</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">The relational model (tables, rows, columns). Keys (Primary, Foreign). Mastering `CREATE TABLE`, `INSERT`, `UPDATE`, and `DELETE` statements. Setting up MySQL.</p><p class="module-lab">Lab: Write SQL scripts to create a Student Information System database and insert sample data.</p></div>
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 7: Advanced SQL Queries</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Mastering the `SELECT` statement, filtering with `WHERE`, sorting with `ORDER BY`, and performing aggregations (`COUNT`, `SUM`, `AVG`) with `GROUP BY`.</p><p class="module-lab">Lab: Write queries to answer analytical questions about the student data.</p></div>
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 8: Joining Tables & Normalization</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Learn the power of `INNER` and `LEFT` joins to combine data from multiple tables. Understand database normalization principles (1NF, 2NF, 3NF).</p><p class="module-lab">Lab: Write a query that joins `students` and `courses` tables to list enrollments.</p></div>
+            </div>
+        </div>
+        <div class="syllabus-section mt-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-[#ff7f50] pl-4">Month 3: Modern Databases & Capstone</h3>
+            <div class="pl-6">
+                <h4 class="text-xl font-semibold text-gray-700 mb-4">Week 9-10: Introduction to NoSQL with MongoDB</h4>
+                <div class="module"><p class="module-title">Topics:</p><p class="module-topics">Explore the differences between SQL and NoSQL. Learn to model data in JSON and perform CRUD operations in MongoDB.</p><p class="module-lab">Lab: Insert and query student records in a MongoDB collection.</p></div>
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 11-12: Capstone Project</h4>
+                <div class="module"><p class="module-title">Capstone Project:</p><p class="module-topics">Design and build a simple command-line "Employee Management System." Design the database schema, write the SQL to create tables, and build a Python application that connects to the database to manage employee records.</p><p class="module-lab">Career Prep: Discussion on career paths like Network Engineer and Database Administrator (DBA).</p></div>
+            </div>
+        </div>
+        <div class="no-print mt-12 text-center text-gray-500 text-sm"><p>This document was generated for a student of Agnidhra Technologies. &copy; 2025. All Rights Reserved.</p></div>
+    </div>
+</body>
+</html>

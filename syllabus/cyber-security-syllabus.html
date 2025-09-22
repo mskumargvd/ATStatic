@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Program Syllabus - Agnidhra Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .syllabus-section .module {
+            margin-bottom: 1.5rem;
+        }
+        .syllabus-section .module-title {
+            font-weight: 600;
+            color: #374151;
+        }
+        .syllabus-section .module-objective {
+            font-style: italic;
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+        .syllabus-section .module-topics, .syllabus-section .module-lab {
+            font-size: 0.9rem;
+            color: #4b5563;
+            padding-left: 1rem;
+            border-left: 2px solid #e5e7eb;
+        }
+         .syllabus-section .module-lab {
+            font-weight: 600;
+            color: #1f2937;
+         }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-4xl mx-auto p-8 md:p-12 bg-white my-8 shadow-lg">
+        
+        <!-- Header Section -->
+        <div class="flex items-center justify-between pb-8 border-b">
+            <div class="flex items-center">
+                <img src="logo.png" alt="Agnidhra Technologies Logo" class="w-16 h-16 rounded-full mr-4">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-800">Agnidhra Technologies</h1>
+                    <p class="text-gray-500">Professional Training Programs</p>
+                </div>
+            </div>
+            <div class="text-right">
+                <h2 class="text-4xl font-bold text-[#ff7f50]">Cyber Security</h2>
+                <p class="font-semibold text-gray-600">3-Month Professional Program Syllabus</p>
+            </div>
+        </div>
+
+        <!-- Month 1 -->
+        <div class="syllabus-section mt-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-[#ff7f50] pl-4">Month 1: The Defender's Foundation</h3>
+            <div class="pl-6">
+                <h4 class="text-xl font-semibold text-gray-700 mb-4">Weeks 1 & 2: Security & Networking Fundamentals</h4>
+                <div class="module">
+                    <p class="module-title">Module 1.1: Core Security Principles</p>
+                    <p class="module-objective">Objective: Understand the goals of cybersecurity.</p>
+                    <p class="module-topics">Topics: The CIA Triad (Confidentiality, Integrity, Availability), Introduction to Risk Management, Overview of common threats (Malware, Phishing).</p>
+                </div>
+                <div class="module">
+                    <p class="module-title">Module 1.2: The TCP/IP & OSI Models</p>
+                    <p class="module-objective">Objective: Learn how data travels across the internet to identify anomalies.</p>
+                    <p class="module-topics">Topics: The 7 Layers of the OSI Model, The 4 Layers of the TCP/IP Model, Encapsulation & Decapsulation.</p>
+                </div>
+                 <div class="module">
+                    <p class="module-title">Module 1.3: IP Addressing & Core Protocols</p>
+                    <p class="module-objective">Objective: Understand network addressing and communication.</p>
+                    <p class="module-topics">Topics: IPv4 Addressing, Public vs. Private IPs, Subnetting basics, TCP vs. UDP, DNS, DHCP.</p>
+                </div>
+                <div class="module">
+                    <p class="module-title">Module 1.4: Hands-On Network Analysis</p>
+                    <p class="module-objective">Objective: Gain practical experience analyzing live network traffic.</p>
+                    <p class="module-topics">Topics: Introduction to Wireshark, Capturing and filtering packets, Following TCP streams.</p>
+                    <p class="module-lab">Lab: Capturing your own web traffic and identifying the DNS, TCP, and HTTP protocols in action.</p>
+                </div>
+
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 3: Operating System Hardening</h4>
+                <div class="module">
+                     <p class="module-title">Module 2.1: Windows Security Fundamentals</p>
+                     <p class="module-objective">Objective: Learn to secure the world's most common desktop OS.</p>
+                     <p class="module-topics">Topics: The Windows File System (NTFS permissions), User Account Control (UAC), Local Security Policy, Windows Defender Firewall, Analyzing Windows Event Logs.</p>
+                </div>
+                 <div class="module">
+                     <p class="module-title">Module 2.2: Linux Security Fundamentals</p>
+                     <p class="module-objective">Objective: Learn to secure the most common server OS.</p>
+                     <p class="module-topics">Topics: The Linux File System (permissions: `rwx`), User and Group management, `sudo` privileges, Securing SSH, Basic firewall configuration with `ufw`/`firewalld`.</p>
+                     <p class="module-lab">Lab: Harden a provided Linux virtual machine by creating a non-root user, configuring SSH key-based authentication, and setting up basic firewall rules.</p>
+                </div>
+
+                 <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 4: The Attacker's Mindset & Threat Intelligence</h4>
+                 <div class="module">
+                     <p class="module-title">Module 3.1: The Cyber Kill Chain</p>
+                     <p class="module-objective">Objective: Understand the structured phases of a typical cyberattack.</p>
+                     <p class="module-topics">Topics: Reconnaissance, Weaponization, Delivery, Exploitation, Installation, Command & Control (C2), Actions on Objectives.</p>
+                </div>
+                 <div class="module">
+                     <p class="module-title">Module 3.2: The MITRE ATT&CK Framework</p>
+                     <p class="module-objective">Objective: Learn the industry-standard language for describing attacker behavior.</p>
+                     <p class="module-topics">Topics: Introduction to ATT&CK, understanding Tactics, Techniques, and Procedures (TTPs), Navigating the ATT&CK Matrix.</p>
+                </div>
+                 <div class="module">
+                     <p class="module-title">Module 3.3: Threat Intelligence</p>
+                     <p class="module-objective">Objective: Learn how defenders use information to stay ahead of threats.</p>
+                     <p class="module-topics">Topics: What is Cyber Threat Intelligence (CTI)? Indicators of Compromise (IoCs) vs. TTPs, Introduction to Open-Source Intelligence (OSINT).</p>
+                     <p class="module-lab">Lab: Use the ATT&CK website to map the TTPs of a famous malware strain (e.g., WannaCry) to the framework.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Month 2 -->
+        <div class="syllabus-section mt-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-[#ff7f50] pl-4">Month 2: The Analyst's Toolkit</h3>
+            <div class="pl-6">
+                <h4 class="text-xl font-semibold text-gray-700 mb-4">Weeks 5 & 6: Log Analysis with SIEM</h4>
+                <div class="module">
+                    <p class="module-title">Module 4.1: Introduction to SIEM</p>
+                    <p class="module-objective">Objective: Understand how a SIEM aggregates and analyzes security data.</p>
+                    <p class="module-topics">Topics: What is a SIEM? Overview of Splunk and the ELK Stack. The data pipeline (ingestion, parsing, normalization).</p>
+                </div>
+                <div class="module">
+                    <p class="module-title">Module 4.2: Writing Basic & Intermediate Queries</p>
+                    <p class="module-objective">Objective: Learn to search and filter massive amounts of log data.</p>
+                    <p class="module-topics">Topics: Searching and filtering logs. Using statistical functions (`count`, `stats`).</p>
+                </div>
+                <div class="module">
+                    <p class="module-title">Module 4.3: Correlation & Alerting</p>
+                    <p class="module-objective">Objective: Learn to automatically detect suspicious patterns.</p>
+                    <p class="module-topics">Topics: Creating correlation rules to detect attacks (e.g., brute force, impossible travel). Setting up automated alerts.</p>
+                    <p class="module-lab">Lab: Ingest logs, write queries, and create a custom alert in a SIEM.</p>
+                </div>
+
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 7: Endpoint Detection & Response (EDR)</h4>
+                <div class="module">
+                     <p class="module-title">Module 5.1: The Need for EDR</p>
+                     <p class="module-objective">Objective: Understand the role of modern endpoint protection.</p>
+                     <p class="module-topics">Topics: Limitations of traditional antivirus. How EDR monitors process execution, file modifications, and network connections.</p>
+                </div>
+                 <div class="module">
+                     <p class="module-title">Module 5.2: Analyzing EDR Alerts</p>
+                     <p class="module-objective">Objective: Learn to investigate suspicious activity on a computer.</p>
+                     <p class="module-topics">Topics: Understanding process trees. Investigating an EDR alert from start to finish. Differentiating malicious vs. legitimate activity.</p>
+                     <p class="module-lab">Lab: Analyze a simulated EDR alert for a malware infection, tracing its execution, persistence, and C2 communication.</p>
+                </div>
+
+                 <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 8: Vulnerability Management</h4>
+                 <div class="module">
+                     <p class="module-title">Module 6.1: Identifying Vulnerabilities</p>
+                     <p class="module-objective">Objective: Learn to proactively find weaknesses in systems.</p>
+                     <p class="module-topics">Topics: The vulnerability management lifecycle. Using Nessus for credentialed and uncredentialed scans.</p>
+                </div>
+                 <div class="module">
+                     <p class="module-title">Module 6.2: Prioritizing & Reporting</p>
+                     <p class="module-objective">Objective: Learn to assess risk and communicate findings.</p>
+                     <p class="module-topics">Topics: Understanding the CVSS scoring system. Analyzing scan results and creating a prioritized remediation report.</p>
+                     <p class="module-lab">Lab: Run a vulnerability scan against an unpatched VM and create a professional report on the top 3 critical findings.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Month 3 -->
+        <div class="syllabus-section mt-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-[#ff7f50] pl-4">Month 3: Incident Response & Career Prep</h3>
+             <div class="pl-6">
+                <h4 class="text-xl font-semibold text-gray-700 mb-4">Week 9: Phishing Analysis</h4>
+                <div class="module">
+                    <p class="module-title">Module 7.1: Anatomy of a Phishing Email</p>
+                    <p class="module-objective">Objective: Learn to deconstruct the most common attack vector.</p>
+                    <p class="module-topics">Topics: Analyzing email headers to trace the origin. Identifying spoofed domains and suspicious language.</p>
+                </div>
+                <div class="module">
+                    <p class="module-title">Module 7.2: Malicious Link & Attachment Analysis</p>
+                    <p class="module-objective">Objective: Learn how to safely investigate payloads.</p>
+                    <p class="module-topics">Topics: Using online sandboxing tools (like Any.Run) to safely open suspicious links and attachments.</p>
+                    <p class="module-lab">Lab: Perform a full analysis of a real-world phishing email sample and document your findings in an incident report.</p>
+                </div>
+
+                <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Week 10: Introduction to Digital Forensics</h4>
+                <div class="module">
+                     <p class="module-title">Module 8.1: Core Concepts</p>
+                     <p class="module-objective">Objective: Understand the principles of evidence collection.</p>
+                     <p class="module-topics">Topics: What is digital evidence? The importance of the Chain of Custody.</p>
+                </div>
+                 <div class="module">
+                     <p class="module-title">Module 8.2: Disk & Memory Forensics</p>
+                     <p class="module-objective">Objective: Get an overview of forensic investigation techniques.</p>
+                     <p class="module-topics">Topics: Introduction to disk imaging. Understanding what kind of artifacts can be recovered from memory (RAM).</p>
+                </div>
+                 <div class="module">
+                     <p class="module-title">Module 8.3: Hands-on with Autopsy</p>
+                     <p class="module-objective">Objective: Gain experience with a professional forensics tool.</p>
+                     <p class="module-topics">Topics: Introduction to the Autopsy digital forensics platform.</p>
+                     <p class="module-lab">Lab: Use Autopsy to examine a sample disk image to recover deleted files and analyze user activity.</p>
+                </div>
+
+                 <h4 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Weeks 11 & 12: Capstone Project & Interview Prep</h4>
+                 <div class="module">
+                     <p class="module-title">Capstone Project: The SOC Analyst Simulation</p>
+                     <p class="module-objective">Objective: Act as a Tier 1 SOC Analyst for a day.</p>
+                     <p class="module-topics">Task: Students will be presented with a queue of 5-7 realistic security alerts in a simulated environment. For each alert, they must investigate, determine if it is a True Positive or a False Positive, document their findings in a professional incident ticket, and recommend clear remediation steps.</p>
+                </div>
+                <div class="module">
+                     <p class="module-title">Career Preparation Module</p>
+                     <p class="module-objective">Objective: Prepare for a successful job search.</p>
+                     <p class="module-topics">Topics: Building a resume that highlights your new skills and projects. Optimizing your LinkedIn profile. A deep dive into common SOC Analyst interview questions (technical and behavioral). Building a home lab for continuous learning.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="no-print mt-12 text-center text-gray-500 text-sm">
+            <p>This document was generated for a student of Agnidhra Technologies. &copy; 2025. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
+
