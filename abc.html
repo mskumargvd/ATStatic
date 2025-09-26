@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon Link -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- SEO & Social Sharing Meta Tags -->
+    <title>Agnidhra Technologies - Expert Tech Training</title>
+    <meta name="description" content="Master in-demand skills in Software Development, Cyber Security, and Cloud through expert-led, hands-on training at Agnidhra Technologies.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.agnidhra-technologies.com/index.html">
+    <meta property="og:title" content="Agnidhra Technologies - Expert Tech Training">
+    <meta property="og:description" content="Master in-demand skills in Software Development, Cyber Security, and Cloud.">
+    <meta property="og:image" content="https://www.agnidhra-technologies.com/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.agnidhra-technologies.com/index.html">
+    <meta property="twitter:title" content="Agnidhra Technologies - Expert Tech Training">
+    <meta property="twitter:description" content="Master in-demand skills in Software Development, Cyber Security, and Cloud.">
+    <meta property="twitter:image" content="https://www.agnidhra-technologies.com/logo.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #1f2937; /* Reverted to solid dark theme */
+            color: #d1d5db; 
+        }
+        .nav-link { 
+            transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out; 
+            border-bottom: 2px solid transparent; 
+        }
+        .nav-link:hover, .nav-link.active { 
+            color: #ff7f50; /* Coral */
+            border-bottom-color: #ff7f50; 
+        }
+        .card { 
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+            background-color: #374151;
+            border: 1px solid #4b5563; 
+        }
+        .card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); 
+        }
+        .fade-in-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
+        #loader { 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background-color: #1f2937; 
+            display: flex; justify-content: center; align-items: center; 
+            z-index: 9999; 
+            transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+        }
+        #loader.hidden { opacity: 0; visibility: hidden; }
+        .loader-content { text-align: center; animation: fadeIn 1s ease-in-out; }
+        .loader-logo { animation: pulse 2s infinite ease-in-out; }
+        .loader-text { font-size: 2rem; font-weight: bold; color: #d1d5db; margin-top: 1rem; letter-spacing: 2px; }
+        .loading-dots { display: flex; justify-content: center; margin-top: 2rem; }
+        .loading-dots .dot { width: 12px; height: 12px; margin: 0 6px; background-color: #ff7f50; border-radius: 50%; animation: pulse-dots 1.4s infinite ease-in-out both; }
+        .loading-dots .dot:nth-child(1) { animation-delay: -0.32s; }
+        .loading-dots .dot:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        @keyframes pulse-dots { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1.0); } }
+        #main-content { opacity: 0; transition: opacity 0.5s ease-in-out; }
+        .faq-item .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out; }
+        .faq-item.active .faq-answer { max-height: 200px; padding-top: 1rem; }
+        .faq-item.active .faq-arrow { transform: rotate(180deg); }
+        .faq-arrow { transition: transform 0.3s ease-in-out; }
+        .path-step { display: flex; align-items: center; font-size: 0.875rem; color: #d1d5db; }
+        .path-step + .path-step::before { content: '→'; margin: 0 0.5rem; color: #ff7f50; font-weight: bold; }
+        .syllabus-link { background-color: #4b5563; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; }
+        .syllabus-link:hover { background-color: #ff7f50; color: #ffffff; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div id="loader">
+        <div class="loader-content">
+            <img src="logo.png" alt="Agnidhra Technologies Logo" class="w-24 h-24 mx-auto loader-logo rounded-full">
+            <div class="loader-text">Agnidhra Technologies</div>
+            <div class="loading-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <header class="bg-[#1f2937]/80 backdrop-blur-md shadow-lg shadow-black/20 sticky top-0 z-50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="#home" class="flex items-center space-x-3">
+                    <img src="logo.png" alt="Agnidhra Technologies Logo" class="w-9 h-9 rounded-full">
+                    <span class="text-2xl font-bold text-gray-100">Agnidhra Technologies</span>
+                </a>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#about" class="nav-link text-gray-300 font-medium pb-1">About</a></li>
+                    <li><a href="#trainer" class="nav-link text-gray-300 font-medium pb-1">Trainers</a></li>
+                    <li><a href="#why-us" class="nav-link text-gray-300 font-medium pb-1">Why Us</a></li>
+                    <li><a href="#pathways" class="nav-link text-gray-300 font-medium pb-1">Pathways</a></li>
+                    <li><a href="#syllabus" class="nav-link text-gray-300 font-medium pb-1">Syllabus</a></li>
+                    <li><a href="#courses" class="nav-link text-gray-300 font-medium pb-1">Courses</a></li>
+                    <li><a href="#testimonials" class="nav-link text-gray-300 font-medium pb-1">Testimonials</a></li>
+                    <li><a href="#faq" class="nav-link text-gray-300 font-medium pb-1">FAQ</a></li>
+                    <li><a href="#contact" class="nav-link text-gray-300 font-medium pb-1">Contact</a></li>
+                </ul>
+                <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </nav>
+            <div id="mobile-menu" class="hidden md:hidden">
+                <!-- Mobile menu content -->
+            </div>
+        </header>
+        <main class="container mx-auto px-6 py-12">
+            
+            <section id="home" class="py-20 fade-in-section text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">Empowering the Next Wave of Tech Leaders</h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">Master in-demand skills in Software Development, Cyber Security, and Cloud through expert-led, hands-on training.</p>
+                <a href="#courses" class="mt-8 inline-block bg-[#ff7f50] text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-opacity-90 transition-colors duration-300">Explore Courses</a>
+            </section>
+            
+            <section id="about" class="py-20 border-t border-gray-700 fade-in-section">
+                <!-- About Content -->
+            </section>
+
+            <!-- UPDATED TRAINER SECTION -->
+            <section id="trainer" class="py-20 border-t border-gray-700 fade-in-section">
+                 <div class="max-w-6xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold text-white mb-12">Meet Your Trainers</h2>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <!-- Trainer 1: Santosh Kumar -->
+                        <div class="card p-8 flex flex-col sm:flex-row items-center text-center sm:text-left">
+                            <img src="https://placehold.co/150x150/374151/ff7f50?text=SK" alt="Santosh Kumar" class="w-32 h-32 rounded-full mx-auto sm:mx-0 sm:mr-8 shadow-lg flex-shrink-0">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Santosh Kumar</h3>
+                                <p class="text-[#ff7f50] font-semibold mb-4">Lead Trainer & Founder | PSM® Certified</p>
+                                <p class="text-gray-300 text-sm">
+                                    With 8 years of hands-on experience across the full software lifecycle, Santosh brings a uniquely holistic perspective. His diverse journey from QA to DevOps and now Cyber Security provides students with a practical, end-to-end understanding of the tech landscape.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Trainer 2: Jeevan Kumar -->
+                        <div class="card p-8 flex flex-col sm:flex-row items-center text-center sm:text-left">
+                            <img src="https://placehold.co/150x150/374151/ff7f50?text=JK" alt="Jeevan Kumar" class="w-32 h-32 rounded-full mx-auto sm:mx-0 sm:mr-8 shadow-lg flex-shrink-0">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Jeevan Kumar</h3>
+                                <p class="text-[#ff7f50] font-semibold mb-4">Co-Trainer | SOC Certified</p>
+                                <p class="text-gray-300 text-sm">
+                                    With 6 years of hands-on experience in the Security Domain, Jeevan brings a systematic perspective to his training. His extensive experience defending systems against real-world threats brings rich practical exposure to the security landscape.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="why-us" class="py-20 border-t border-gray-700 fade-in-section">
+                <!-- Why Us content -->
+            </section>
+
+            <section id="pathways" class="py-20 border-t border-gray-700 fade-in-section">
+                 <!-- Pathways content -->
+            </section>
+            
+            <section id="syllabus" class="py-20 border-t border-gray-700 fade-in-section">
+                <!-- Syllabus content -->
+            </section>
+
+             <section id="admissions" class="py-20 border-t border-gray-700 fade-in-section">
+                 <!-- Admissions content -->
+            </section>
+
+            <section id="courses" class="py-20 border-t border-gray-700 fade-in-section">
+                 <!-- Courses content -->
+            </section>
+
+             <section id="testimonials" class="py-20 border-t border-gray-700 fade-in-section">
+                 <!-- Testimonials content -->
+            </section>
+
+            <section id="blog" class="py-20 border-t border-gray-700 fade-in-section">
+                 <!-- Blog content -->
+            </section>
+
+            <section id="faq" class="py-20 border-t border-gray-700 fade-in-section">
+                <!-- FAQ content -->
+            </section>
+            
+            <section id="contact" class="py-20 border-t border-gray-700 fade-in-section">
+                 <!-- Contact content -->
+            </section>
+        </main>
+        <footer class="bg-gray-900 text-white py-12">
+            <!-- Footer content -->
+        </footer>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            const mainContent = document.getElementById('main-content');
+            setTimeout(() => {
+                loader.classList.add('hidden');
+                mainContent.style.opacity = '1';
+            }, 1500);
+
+            document.getElementById('mobile-menu-button').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.fade-in-section').forEach(section => observer.observe(section));
+            
+            const activateNavLink = () => {
+                let current = 'home';
+                document.querySelectorAll('main section').forEach(section => {
+                    if (pageYOffset >= section.offsetTop - 150) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            };
+            window.addEventListener('scroll', activateNavLink);
+
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const faqItem = button.parentElement;
+                    faqItem.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
