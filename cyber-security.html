@@ -85,16 +85,6 @@
             border-radius: 1rem;
             backdrop-filter: blur(5px);
         }
-        .loader-logo { animation: pulse 2s infinite ease-in-out; }
-        .loader-text { font-size: 2rem; font-weight: bold; color: #d1d5db; margin-top: 1rem; letter-spacing: 2px; }
-        .loading-dots { display: flex; justify-content: center; margin-top: 2rem; }
-        .loading-dots .dot { width: 12px; height: 12px; margin: 0 6px; background-color: #ff7f50; border-radius: 50%; animation: pulse-dots 1.4s infinite ease-in-out both; }
-        .loading-dots .dot:nth-child(1) { animation-delay: -0.32s; }
-        .loading-dots .dot:nth-child(2) { animation-delay: -0.16s; }
-        @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
-        @keyframes pulse-dots { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1.0); } }
-        .main-content { display: none; }
     </style>
 </head>
 <body class="antialiased">
