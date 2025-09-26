@@ -32,7 +32,11 @@
         body { 
             font-family: 'Inter', sans-serif; 
             background-image: url('logo-animation.gif');
-            background-color: #1f2937; /* solid dark theme */
+            background-color: #1f2937; /* Fallback color */
+            background-blend-mode: screen;
+            background-attachment: fixed; /* Keeps the animation stationary on scroll */
+            background-size: cover;
+            background-position: center;
             color: #d1d5db; 
         }
         .nav-link { 
@@ -52,7 +56,14 @@
             transform: translateY(-5px); 
             box-shadow: 0 10px 15px -3px rgb(255 127 80 / 0.1), 0 4px 6px -4px rgb(255 127 80 / 0.1); 
         }
-       
+        /* New wrapper for all content sections */
+        .content-wrapper {
+            background-color: rgba(31, 41, 55, 0.8); /* Semi-transparent background */
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            border: 1px solid #4b5563;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+        }
         .fade-in-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
         .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
         
@@ -102,9 +113,6 @@
             color: #ff7f50;
             font-weight: bold;
         }
-        .syllabus-link { background-color: #4b5563; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; }
-        .syllabus-link:hover { background-color: #ff7f50; color: #ffffff; }
-    
     </style>
 </head>
 <body class="antialiased">
@@ -174,32 +182,27 @@
                 </div>
             </section>
 
-            <!-- UPDATED TRAINER SECTION -->
-            <section id="trainer" class="py-20 border-t border-gray-700 fade-in-section">
-                 <div class="max-w-6xl mx-auto text-center">
-                    <h2 class="text-3xl font-bold text-white mb-12">Meet Your Trainers</h2>
-                    <div class="grid md:grid-cols-2 gap-12">
-                        <!-- Trainer 1: Santosh Kumar -->
-                        <div class="card p-8 flex flex-col sm:flex-row items-center text-center sm:text-left">
-                            <img src="https://placehold.co/150x150/374151/ff7f50?text=SK" alt="Santosh Kumar" class="w-32 h-32 rounded-full mx-auto sm:mx-0 sm:mr-8 shadow-lg flex-shrink-0">
-                            <div>
-                                <h3 class="text-2xl font-bold text-white">Santosh Kumar</h3>
-                                <p class="text-[#ff7f50] font-semibold mb-4">Lead Trainer & Founder | PSM® Certified</p>
-                                <p class="text-gray-300 text-sm">
-                                    With 8 years of hands-on experience across the full software lifecycle, Santosh brings a uniquely holistic perspective. His diverse journey from QA to DevOps and now Cyber Security provides students with a practical, end-to-end understanding of the tech landscape.
-                                </p>
-                            </div>
+            <section id="trainer" class="content-wrapper mt-8 fade-in-section">
+                 <div class="max-w-4xl mx-auto text-center p-12">
+                    <h2 class="text-3xl font-bold text-white mb-12">Meet Your Lead Trainer</h2>
+                    <div class="card p-8 md:flex items-center text-left bg-gray-900/50">
+                        <img src="https://placehold.co/150x150/111827/ff7f50?text=SK" alt="Santosh Kumar" class="w-32 h-32 rounded-full mx-auto md:mx-0 md:mr-8 shadow-lg flex-shrink-0">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Santosh Kumar</h3>
+                            <p class="text-[#ff7f50] font-semibold mb-4">Lead Trainer & Founder | PSM® Certified</p>
+                            <p class="text-gray-300">
+                                With 8 years of hands-on experience across the full software lifecycle, Santosh brings a uniquely holistic perspective to his training. His career began with a strong 4-year foundation in Quality Assurance, mastering manual, API, data, and performance testing. He then transitioned to a Cloud and DevOps role for 3 years, building and automating the core infrastructure that powers modern applications. Most recently, he has shifted in to Cyber Security as a SOC Analyst, defending systems against real-world threats. This diverse journey—from ensuring quality, to building infrastructure, and now protecting it—provides students with a practical, end-to-end understanding of the tech landscape. As a certified Professional Scrum Master (PSM), Santosh also integrates the agile methodologies that drive today's top tech teams.
+                            </p>
                         </div>
-                        <!-- Trainer 2: Jeevan Kumar -->
-                        <div class="card p-8 flex flex-col sm:flex-row items-center text-center sm:text-left">
-                            <img src="https://placehold.co/150x150/374151/ff7f50?text=JK" alt="Jeevan Kumar" class="w-32 h-32 rounded-full mx-auto sm:mx-0 sm:mr-8 shadow-lg flex-shrink-0">
-                            <div>
-                                <h3 class="text-2xl font-bold text-white">Jeevan Kumar</h3>
-                                <p class="text-[#ff7f50] font-semibold mb-4">Co-Trainer | SOC Certified</p>
-                                <p class="text-gray-300 text-sm">
-                                    With 6 years of hands-on experience in the Security Domain, Jeevan brings a systematic perspective to his training. His extensive experience defending systems against real-world threats brings rich practical exposure to the security landscape.
-                                </p>
-                            </div>
+                    </div>
+                    <div class="card p-8 md:flex items-center text-left bg-gray-900/50">
+                        <img src="https://placehold.co/150x150/111827/ff7f50?text=JK" alt="Jeevan Kumar" class="w-32 h-32 rounded-full mx-auto md:mx-0 md:mr-8 shadow-lg flex-shrink-0">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Jeevan Kumar</h3>
+                            <p class="text-[#ff7f50] font-semibold mb-4">Co-Trainer | SOC Certified</p>
+                            <p class="text-gray-300">
+                                With 6 years of hands-on experience across Security Domain, Jeevan brings a systematic perspective to his training. He bagan his career with a strong 6-years in defending systems against real-world threats. This extensive experience brings in a rich practical exposure to security landscape. As a certified SOC Analyst, Jeevan also integrates the latest security practices that drive today's top tech teams.
+                            </p>
                         </div>
                     </div>
                 </div>
