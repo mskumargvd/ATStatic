@@ -26,121 +26,123 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-image: url('logo-animation.gif');
-            background-color: #1f2937; /* Fallback color */
-            background-blend-mode: screen;
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            color: #d1d5db; 
+        :root {
+            --bg-dark: #0F172A;
+            --header-footer-dark: #1E293B;
+            --card-dark: #1E293B;
+            --accent: #38BDF8;
+            --text-light: #CBD5E1;
+            --text-dark: #94A3B8;
         }
-        .nav-link { 
-            transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out; 
-            border-bottom: 2px solid transparent; 
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
         }
-        .nav-link:hover, .nav-link.active { 
-            color: #ff7f50; /* Coral */
-            border-bottom-color: #ff7f50; 
+        .nav-link {
+            transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out;
+            border-bottom: 2px solid transparent;
         }
-        .content-wrapper {
-            background-color: rgba(31, 41, 55, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid #4b5563;
-            border-radius: 0.5rem;
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+        .content-section {
+            background-color: var(--card-dark);
+            border: 1px solid #334155;
+            border-radius: 0.75rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            padding: 2rem;
             margin-bottom: 2rem;
-            padding: clamp(1.5rem, 5vw, 3rem);
         }
-        .tool-card { 
-            background-color: #ffffff; 
-            border: 1px solid #4b5563; 
-            transition: transform 0.2s, box-shadow 0.2s; 
+        .tool-card {
+            background-color: #ffffff;
+            border: 1px solid #334155;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
         .tool-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
         .content-section ul { list-style-type: none; padding-left: 0; }
         .content-section li { padding-left: 1.5rem; position: relative; margin-bottom: 1rem; }
-        .content-section li::before { content: '✓'; position: absolute; left: 0; color: #ff7f50; font-weight: bold; }
-        .topic-description { margin-left: 1.5rem; font-size: 0.9rem; color: #9ca3af; border-left: 2px solid #4b5563; padding-left: 1rem; margin-top: 0.25rem; }
-        #loader { 
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-            background-color: #1f2937; 
-            display: flex; justify-content: center; align-items: center; 
-            z-index: 9999; 
-            transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
-            background-image: url('logo-animation.gif');
-            background-blend-mode: screen;
-            background-size: cover;
-            background-position: center;
-        }
-        #loader.hidden { opacity: 0; visibility: hidden; }
-        #main-content { opacity: 0; transition: opacity 0.5s ease-out; }
-        .loader-content { text-align: center; animation: fadeIn 1s ease-in-out; background-color: rgba(31, 41, 55, 0.7); padding: 2rem; border-radius: 1rem; backdrop-filter: blur(5px); }
-        .loader-logo { animation: pulse 2s infinite ease-in-out; }
-        .loader-text { font-size: 2rem; font-weight: bold; color: #d1d5db; margin-top: 1rem; letter-spacing: 2px; }
-        .loading-dots { display: flex; justify-content: center; margin-top: 2rem; }
-        .loading-dots .dot { width: 12px; height: 12px; margin: 0 6px; background-color: #ff7f50; border-radius: 50%; animation: pulse-dots 1.4s infinite ease-in-out both; }
-        .loading-dots .dot:nth-child(1) { animation-delay: -0.32s; }
-        .loading-dots .dot:nth-child(2) { animation-delay: -0.16s; }
-        @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
-        @keyframes pulse-dots { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1.0); } }
+        .content-section li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+        .topic-description { margin-left: 1.5rem; font-size: 0.9rem; color: var(--text-dark); border-left: 2px solid #334155; padding-left: 1rem; margin-top: 0.25rem; }
+        .footer-link { color: var(--text-dark); transition: color 0.2s ease-in-out; }
+        .footer-link:hover { color: var(--accent); }
     </style>
 </head>
 <body class="antialiased">
 
-    <div id="loader">
-        <div class="loader-content">
-            <img src="logo.png" alt="Agnidhra Technologies Logo" class="w-24 h-24 mx-auto loader-logo rounded-full">
-            <div class="loader-text">Agnidhra Technologies</div>
-            <div class="loading-dots">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
-        </div>
-    </div>
-
-    <div id="main-content">
-        <header class="bg-[#111827]/80 backdrop-blur-md shadow-lg shadow-black/20 sticky top-0 z-50">
-            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="index.html" class="flex items-center space-x-3">
-                    <img src="logo.png" alt="Agnidhra Technologies Logo" class="w-9 h-9 rounded-full">
-                    <span class="text-2xl font-bold text-gray-100">Agnidhra Technologies</span>
-                </a>
-                <ul class="hidden md:flex space-x-8">
-                    <li><a href="index.html#about" class="nav-link text-gray-300 font-medium pb-1">About Us</a></li>
-                    <li><a href="index.html#courses" class="nav-link text-gray-300 font-medium pb-1">Courses</a></li>
-                    <li><a href="index.html#blog" class="nav-link text-gray-300 font-medium pb-1">Blog</a></li>
-                </ul>
-                <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </nav>
-            <div id="mobile-menu" class="hidden md:hidden">
-                <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <li><a href="index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-[#ff7f50] hover:bg-[#374151]">About Us</a></li>
-                    <li><a href="index.html#courses" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-[#ff7f50] hover:bg-[#374151]">Courses</a></li>
-                    <li><a href="index.html#blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-[#ff7f50] hover:bg-[#374151]">Blog</a></li>
-                </ul>
-            </div>
-        </header>
-        <main class="container mx-auto px-6 py-12">
-            <div class="content-wrapper">
-                <section class="text-center pt-12">
-                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">AI, ML & Data Science Professional Program</h1>
-                    <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">Learn to extract valuable insights from data and build intelligent systems using cutting-edge AI and Machine Learning techniques.</p>
-                </section>
-                <div class="max-w-4xl mx-auto space-y-8 px-8 pb-12">
-                    <section class="content-section p-8 rounded-lg shadow-lg bg-gray-900/50 mt-12">
-                        <h2 class="text-2xl font-bold text-white mb-4">Why Learn AI, ML & Data Science?</h2>
-                        <p class="text-gray-300">Artificial Intelligence and Machine Learning are transforming every industry by enabling data-driven decision-making and intelligent automation. Professionals in this field are at the forefront of innovation, building everything from predictive models to language understanding systems. This course equips you with the practical skills to analyze complex datasets, build powerful predictive models, and create the intelligent applications of the future.</p>
+    <body class="antialiased">
+        <div id="main-content">
+            <header class="bg-slate-800 backdrop-blur-md shadow-lg shadow-black/20 sticky top-0 z-50">
+                <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="logo.png" alt="Agnidhra Technologies Logo" class="w-9 h-9 rounded-full">
+                        <span class="text-2xl font-bold text-white">Agnidhra Technologies</span>
+                    </a>
+                    <ul class="hidden md:flex space-x-8">
+                        <li><a href="index.html#about" class="nav-link text-slate-300 font-medium pb-1">About</a></li>
+                        <li><a href="index.html#courses" class="nav-link text-slate-300 font-medium pb-1">Courses</a></li>
+                        <li><a href="index.html#blog" class="nav-link text-slate-300 font-medium pb-1">Blog</a></li>
+                    </ul>
+                    <button id="mobile-menu-button" class="md:hidden text-slate-300 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </nav>
+                <div id="mobile-menu" class="hidden md:hidden">
+                    <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        <li><a href="index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-sky-500 hover:bg-slate-700">About</a></li>
+                        <li><a href="index.html#courses" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-sky-500 hover:bg-slate-700">Courses</a></li>
+                        <li><a href="index.html#blog" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-sky-500 hover:bg-slate-700">Blog</a></li>
+                    </ul>
+                </div>
+            </header>
+            <main class="container mx-auto px-6 py-12">
+                <div class="max-w-4xl mx-auto content-section">
+                    <section class="text-center py-16">
+                        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">AI, ML & Data Science Professional Program</h1>
+                        <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">Unlock insights from data. Learn Python, TensorFlow, and advanced machine learning models to build intelligent applications.</p>
                     </section>
-                    <section class="content-section p-8 rounded-lg shadow-lg bg-gray-900/50">
-                        <h2 class="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-4">Course Curriculum (6 Months)</h2>
-                        <div class="space-y-12">
-                            <!-- Part 1 -->
-                            <div>
+                    ...existing code...
+                </div>
+            </main>
+            <footer class="bg-slate-800 text-white py-12">
+                <div class="container mx-auto px-6">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                        <div class="col-span-1 md:col-span-2">
+                            <div class="flex items-center mb-4">
+                                <img src="logo.png" alt="Agnidhra Technologies Logo" class="w-10 h-10 rounded-full mr-3">
+                                <span class="text-2xl font-bold">Agnidhra Technologies</span>
+                            </div>
+                            <p class="text-slate-400">Empowering the next wave of tech leaders with practical, hands-on training in high-demand skills.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                            <ul class="space-y-2">
+                                <li><a href="index.html#about" class="footer-link">About Us</a></li>
+                                <li><a href="index.html#courses" class="footer-link">All Courses</a></li>
+                                <li><a href="index.html#faq" class="footer-link">FAQ</a></li>
+                                <li><a href="index.html#contact" class="footer-link">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-4">Connect</h4>
+                            <ul class="space-y-2 mb-6">
+                                <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
+                                <li><a href="disclaimer.html" class="footer-link">Disclaimer</a></li>
+                            </ul>
+                            <div class="flex space-x-4">
+                                <a href="#" class="footer-link" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                                <a href="#" class="footer-link" aria-label="YouTube"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
+                                <a href="https://www.instagram.com/agnidhra_technologies/" class="footer-link" aria-label="Instagram"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.947s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 border-t border-slate-700 pt-8 text-center text-slate-500">
+                        <p>&copy; 2025 Agnidhra Technologies. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
                                 <h3 class="text-2xl font-semibold text-[#ff7f50] mb-6">Part 1: The Data Science Toolkit (Months 1-2)</h3>
                                 <ul class="space-y-4">
                                     <li><b>Month 1: Advanced Data Manipulation</b><p class="topic-description">A masterclass in Pandas for complex data wrangling. Advanced data cleaning, handling diverse data types, and mastering `groupby` and `merge` operations.</p></li>
