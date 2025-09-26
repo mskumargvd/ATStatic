@@ -3,26 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C Programming Course - Agnidhra Technologies</title>
-    <meta name="description" content="Build a rock-solid foundation in procedural programming, memory management, and core computer science principles with C.">
+    
+    <!-- SEO & Social Sharing Meta Tags -->
+    <title>Cloud & DevOps Course - Agnidhra Technologies</title>
+    <meta name="description" content="Master AWS, Docker, and Kubernetes. Learn to design, deploy, and manage scalable and automated cloud infrastructure.">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <meta property="og:title" content="C Programming Course - Agnidhra Technologies">
-    <meta property="twitter:title" content="C Programming Course - Agnidhra Technologies">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.agnidhra-technologies.com/cloud-devops.html">
+    <meta property="og:title" content="Cloud & DevOps Course - Agnidhra Technologies">
+    <meta property="og:description" content="Master AWS, Docker, and Kubernetes to build automated cloud infrastructure.">
     <meta property="og:image" content="https://www.agnidhra-technologies.com/logo.png">
-    <meta property="twitter:image" content="https://www.agnidhra-technologies.com/logo.png">
 
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.agnidhra-technologies.com/cloud-devops.html">
+    <meta property="twitter:title" content="Cloud & DevOps Course - Agnidhra Technologies">
+    <meta property="twitter:description" content="Master AWS, Docker, and Kubernetes to build automated cloud infrastructure.">
+    <meta property="twitter:image" content="https://www.agnidhra-technologies.com/logo.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { 
             font-family: 'Inter', sans-serif; 
             background-image: url('logo-animation.gif');
-            background-color: #1f2937;
+            background-color: #1f2937; /* Fallback color */
             background-blend-mode: screen;
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
             color: #d1d5db; 
+        }
+        .nav-link { 
+            transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out; 
+            border-bottom: 2px solid transparent; 
+        }
+        .nav-link:hover, .nav-link.active { 
+            color: #ff7f50; /* Coral */
+            border-bottom-color: #ff7f50; 
         }
         .content-wrapper {
             background-color: rgba(31, 41, 55, 0.8);
@@ -38,14 +58,6 @@
             transition: transform 0.2s, box-shadow 0.2s; 
         }
         .tool-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        .nav-link { 
-            transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out; 
-            border-bottom: 2px solid transparent; 
-        }
-        .nav-link:hover, .nav-link.active { 
-            color: #ff7f50;
-            border-bottom-color: #ff7f50; 
-        }
         .content-section ul { list-style-type: none; padding-left: 0; }
         .content-section li { padding-left: 1.5rem; position: relative; margin-bottom: 1rem; }
         .content-section li::before { content: '✓'; position: absolute; left: 0; color: #ff7f50; font-weight: bold; }
@@ -76,6 +88,7 @@
     </style>
 </head>
 <body class="antialiased">
+
     <div id="loader">
         <div class="loader-content">
             <img src="logo.png" alt="Agnidhra Technologies Logo" class="w-24 h-24 mx-auto loader-logo rounded-full">
@@ -87,6 +100,7 @@
             </div>
         </div>
     </div>
+
     <div id="main-content">
         <header class="bg-[#111827]/80 backdrop-blur-md shadow-lg shadow-black/20 sticky top-0 z-50">
             <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -114,41 +128,39 @@
         <main class="container mx-auto px-6 py-12">
             <div class="content-wrapper">
                 <section class="text-center pt-12">
-                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">C Programming for Engineers</h1>
-                    <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">Master the foundational language of computer science, from core logic to advanced memory management.</p>
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Cloud & DevOps Professional Program</h1>
+                    <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">Build, automate, and manage modern infrastructure with leading Cloud and DevOps technologies.</p>
                 </section>
                 <div class="max-w-4xl mx-auto space-y-8 px-8 pb-12">
-                     <section class="content-section p-8 rounded-lg shadow-lg bg-gray-900/50 mt-12">
-                        <h2 class="text-2xl font-bold text-white mb-4">Why Learn C Programming?</h2>
-                        <p class="text-gray-300">C is the mother of all modern programming languages. Learning C provides an unparalleled understanding of how computers actually work, from memory management to system-level operations. For an engineer, mastering C is not just about learning a language; it's about building a deep, fundamental understanding of computation that will make you a better programmer in any other language you learn, whether it's Python, Java, or C++.</p>
+                    <section class="content-section p-8 rounded-lg shadow-lg bg-gray-900/50 mt-12">
+                        <h2 class="text-2xl font-bold text-white mb-4">Why Learn Cloud & DevOps?</h2>
+                        <p class="text-gray-300">Cloud computing and DevOps have revolutionized how software is built and deployed. Businesses rely on cloud platforms for scalability and flexibility, while DevOps practices accelerate development and improve reliability. Professionals skilled in both domains are among the most sought-after in the tech industry, responsible for architecting and automating the backbone of modern applications.</p>
                     </section>
                     <section class="content-section p-8 rounded-lg shadow-lg bg-gray-900/50">
-                        <h2 class="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-4">Course Curriculum</h2>
+                        <h2 class="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-4">Course Curriculum (6 Months)</h2>
                         <div class="space-y-12">
-                            <!-- Month 1 -->
+                            <!-- Part 1 -->
                             <div>
-                                <h3 class="text-2xl font-semibold text-[#ff7f50] mb-6">Month 1: Programming Fundamentals</h3>
+                                <h3 class="text-2xl font-semibold text-[#ff7f50] mb-6">Part 1: Cloud Infrastructure Mastery (Months 1-2)</h3>
                                 <ul class="space-y-4">
-                                    <li><b>Week 1-2: Core Concepts & Control Flow</b><p class="topic-description">Set up your C compiler, learn variables, data types, operators, and master conditional logic with `if-else` and `switch-case` statements.</p></li>
-                                    <li><b>Week 3: Loops and Functions</b><p class="topic-description">Understand and implement `for`, `while`, and `do-while` loops. Learn to write modular, reusable code with functions.</p></li>
-                                    <li><b>Week 4: Pointers & Memory</b><p class="topic-description">Dive into the most powerful feature of C. Understand memory addresses, the dereference operator, and pass-by-reference.</p></li>
+                                    <li><b>Month 1: AWS Core Services & Networking</b><p class="topic-description">In-depth AWS IAM, advanced VPC design, and mastery of EC2, load balancing, and S3 for scalable storage.</p></li>
+                                    <li><b>Month 2: Serverless, Databases & Monitoring</b><p class="topic-description">Introduction to Serverless with AWS Lambda, managed databases with RDS, and setting up monitoring with CloudWatch, Prometheus & Grafana.</p></li>
                                 </ul>
                             </div>
-                            <!-- Month 2 -->
+                            <!-- Part 2 -->
                             <div>
-                                <h3 class="text-2xl font-semibold text-[#ff7f50] mb-6">Month 2: Arrays, Strings, and Structures</h3>
+                                <h3 class="text-2xl font-semibold text-[#ff7f50] mb-6">Part 2: The DevOps & Automation Engine (Months 3-4)</h3>
                                 <ul class="space-y-4">
-                                    <li><b>Week 5-6: Arrays and Strings</b><p class="topic-description">Master one-dimensional arrays, multi-dimensional arrays (matrices), and the relationship between arrays and pointers. Learn to manipulate null-terminated strings.</p></li>
-                                    <li><b>Week 7-8: Structures (`struct`)</b><p class="topic-description">Create your own custom data types. Learn to work with arrays of structures and pointers to structures to manage complex data.</p></li>
+                                    <li><b>Month 3: Deep Dive into Containerization</b><p class="topic-description">Advanced Docker concepts and a deep dive into Kubernetes architecture, including Deployments, Services, and Persistent Volumes.</p></li>
+                                    <li><b>Month 4: The Automated Pipeline</b><p class="topic-description">Mastering Jenkins for CI/CD and in-depth Infrastructure as Code (IaC) with Terraform to manage cloud resources reliably.</p></li>
                                 </ul>
                             </div>
-                            <!-- Month 3 -->
+                            <!-- Part 3 -->
                             <div>
-                                <h3 class="text-2xl font-semibold text-[#ff7f50] mb-6">Month 3: Advanced Topics & Capstone</h3>
+                                <h3 class="text-2xl font-semibold text-[#ff7f50] mb-6">Part 3: Advanced Practices & Capstone (Months 5-6)</h3>
                                 <ul class="space-y-4">
-                                    <li><b>Week 9: Dynamic Memory Allocation</b><p class="topic-description">Go beyond static memory. Master `malloc()`, `calloc()`, and `free()` to manage memory at runtime and avoid memory leaks.</p></li>
-                                    <li><b>Week 10: File I/O</b><p class="topic-description">Learn to read data from and write data to text files, allowing your programs to persist information.</p></li>
-                                    <li><b>Week 11-12: Capstone: Contact Management System</b><p class="topic-description">Build a complete command-line application to manage a list of contacts. The project will combine everything you've learned: structures, pointers, dynamic memory, and file handling.</p></li>
+                                    <li><b>Month 5: Configuration Management & Security</b><p class="topic-description">Automate server configuration with Ansible and integrate security scanning into your CI/CD pipeline (DevSecOps).</p></li>
+                                    <li><b>Month 6: Capstone: Production-Grade Pipeline</b><p class="topic-description">Build an end-to-end project using Terraform to provision a Kubernetes cluster on AWS (EKS) and Jenkins to automatically deploy a containerized application with zero downtime.</p></li>
                                 </ul>
                             </div>
                         </div>
@@ -157,25 +169,34 @@
                          <h2 class="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-4">Tools You Will Master</h2>
                          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-center">
                             <div class="tool-card p-4 rounded-lg flex flex-col items-center justify-center">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="w-16 h-16 object-contain">
-                                <p class="mt-2 text-gray-800 font-semibold">C Language</p>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" class="w-20 h-20 object-contain">
+                                <p class="mt-2 text-gray-800 font-semibold">AWS</p>
                             </div>
                             <div class="tool-card p-4 rounded-lg flex flex-col items-center justify-center">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gcc/gcc-original.svg" alt="GCC" class="w-16 h-16 object-contain">
-                                <p class="mt-2 text-gray-800 font-semibold">GCC Compiler</p>
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/docker.svg" alt="Docker" class="w-20 h-20 object-contain">
+                                <p class="mt-2 text-gray-800 font-semibold">Docker</p>
                             </div>
                             <div class="tool-card p-4 rounded-lg flex flex-col items-center justify-center">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="w-16 h-16 object-contain">
-                                <p class="mt-2 text-gray-800 font-semibold">VS Code</p>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg" alt="Kubernetes" class="w-16 h-16 object-contain">
+                                <p class="mt-2 text-gray-800 font-semibold">Kubernetes</p>
                             </div>
-                             <div class="tool-card p-4 rounded-lg flex flex-col items-center justify-center">
-                               <svg class="w-16 h-16 text-gray-800 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                                <p class="mt-2 text-gray-800 font-semibold">GDB Debugger</p>
+                            <div class="tool-card p-4 rounded-lg flex flex-col items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg" alt="Jenkins" class="w-16 h-16 object-contain">
+                                <p class="mt-2 text-gray-800 font-semibold">Jenkins</p>
+                            </div>
+                            <div class="tool-card p-4 rounded-lg flex flex-col items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Terraform_Logo.svg" alt="Terraform" class="w-16 h-16 object-contain">
+                                <p class="mt-2 text-gray-800 font-semibold">Terraform</p>
+                            </div>
+                            <div class="tool-card p-4 rounded-lg flex flex-col items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Ansible_logo.svg" alt="Ansible" class="w-16 h-16 object-contain">
+                                <p class="mt-2 text-gray-800 font-semibold">Ansible</p>
                             </div>
                          </div>
                     </section>
+                    
                      <section class="text-center py-16">
-                         <h2 class="text-3xl font-bold text-white mb-4">Ready to Master the Language of Systems?</h2>
+                         <h2 class="text-3xl font-bold text-white mb-4">Ready to Build the Future of Tech?</h2>
                          <a href="index.html#contact" class="inline-block bg-[#ff7f50] text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-opacity-90 transition-colors duration-300">Enroll Now</a>
                     </section>
                 </div>

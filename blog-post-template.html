@@ -29,30 +29,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg-dark: #0F172A;
-            --header-footer-dark: #1E293B;
-            --card-dark: #1E293B;
-            --accent: #38BDF8;
-            --text-light: #CBD5E1;
-            --text-dark: #94A3B8;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-        }
-        .nav-link {
-            transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out;
-            border-bottom: 2px solid transparent;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: var(--accent);
-            border-bottom-color: var(--accent);
-        }
-        .prose { color: var(--text-light); }
-        .prose h1, .prose h2, .prose h3 { color: #fff; }
-        .prose a { color: var(--accent); }
+        body { font-family: 'Inter', sans-serif; background-color: #1f2937; color: #d1d5db; }
+        .nav-link { transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out; border-bottom: 2px solid transparent; }
+        .nav-link:hover, .nav-link.active { color: #ff7f50; border-bottom-color: #ff7f50; }
+        .prose { color: #d1d5db; }
+        .prose h1, .prose h2, .prose h3 { color: #ffffff; }
+        .prose a { color: #ff7f50; }
         .prose code { background-color: #374151; padding: 0.2em 0.4em; border-radius: 3px; }
         .prose pre { background-color: #111827; padding: 1em; border-radius: 8px; }
     </style>
