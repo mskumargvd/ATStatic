@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Social Sharing Meta Tags -->
+    <title>Cloud & DevOps Course - Agnidhra Technologies</title>
+    <meta name="description" content="Master AWS, Docker, and Kubernetes. Learn to design, deploy, and manage scalable and automated cloud infrastructure.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.agnidhra-technologies.com/cloud-devops.html">
+    <meta property="og:title" content="Cloud & DevOps Course - Agnidhra Technologies">
+    <meta property="og:description" content="Master AWS, Docker, and Kubernetes to build automated cloud infrastructure.">
+    <meta property="og:image" content="https://www.agnidhra-technologies.com/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.agnidhra-technologies.com/cloud-devops.html">
+    <meta property="twitter:title" content="Cloud & DevOps Course - Agnidhra Technologies">
+    <meta property="twitter:description" content="Master AWS, Docker, and Kubernetes to build automated cloud infrastructure.">
+    <meta property="twitter:image" content="https://www.agnidhra-technologies.com/logo.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-image: url('logo-animation.gif');
+            background-color: #1f2937; /* Fallback color */
+            background-blend-mode: screen;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: #d1d5db; 
+        }
+        .nav-link { 
+            transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out; 
+            border-bottom: 2px solid transparent; 
+        }
+        .nav-link:hover, .nav-link.active { 
+            color: #ff7f50; /* Coral */
+            border-bottom-color: #ff7f50; 
+        }
+        .content-wrapper {
+            background-color: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid #4b5563;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            padding: clamp(1.5rem, 5vw, 3rem);
+        }
+        .tool-card { 
+            background-color: #ffffff; 
+            border: 1px solid #4b5563; 
+            transition: transform 0.2s, box-shadow 0.2s; 
+        }
+        .tool-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .content-section ul { list-style-type: none; padding-left: 0; }
+        .content-section li { padding-left: 1.5rem; position: relative; margin-bottom: 1rem; }
+        .content-section li::before { content: '✓'; position: absolute; left: 0; color: #ff7f50; font-weight: bold; }
+        .topic-description { margin-left: 1.5rem; font-size: 0.9rem; color: #9ca3af; border-left: 2px solid #4b5563; padding-left: 1rem; margin-top: 0.25rem; }
+        #loader { 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background-color: #1f2937; 
+            display: flex; justify-content: center; align-items: center; 
+            z-index: 9999; 
+            transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+            background-image: url('logo-animation.gif');
+            background-blend-mode: screen;
+            background-size: cover;
+            background-position: center;
+        }
+        #loader.hidden { opacity: 0; visibility: hidden; }
+        #main-content { opacity: 0; transition: opacity 0.5s ease-out; }
+        .loader-content { text-align: center; animation: fadeIn 1s ease-in-out; background-color: rgba(31, 41, 55, 0.7); padding: 2rem; border-radius: 1rem; backdrop-filter: blur(5px); }
+        .loader-logo { animation: pulse 2s infinite ease-in-out; }
+        .loader-text { font-size: 2rem; font-weight: bold; color: #d1d5db; margin-top: 1rem; letter-spacing: 2px; }
+        .loading-dots { display: flex; justify-content: center; margin-top: 2rem; }
+        .loading-dots .dot { width: 12px; height: 12px; margin: 0 6px; background-color: #ff7f50; border-radius: 50%; animation: pulse-dots 1.4s infinite ease-in-out both; }
+        .loading-dots .dot:nth-child(1) { animation-delay: -0.32s; }
+        .loading-dots .dot:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        @keyframes pulse-dots { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1.0); } }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div id="loader">
+        <div class="loader-content">
+            <img src="logo.png" alt="Agnidhra Technologies Logo" class="w-24 h-24 mx-auto loader-logo rounded-full">
+            <div class="loader-text">Agnidhra Technologies</div>
+            <div class="loading-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <header class="bg-[#111827]/80 backdrop-blur-md shadow-lg shadow-black/20 sticky top-0 z-50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <img src="logo.png" alt="Agnidhra Technologies Logo" class="w-9 h-9 rounded-full">
+                    <span class="text-2xl font-bold text-gray-100">Agnidhra Technologies</span>
+                </a>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html#about" class="nav-link text-gray-300 font-medium pb-1">About Us</a></li>
+                    <li><a href="index.html#courses" class="nav-link text-gray-300 font-medium pb-1">Courses</a></li>
+                    <li><a href="index.html#blog" class="nav-link text-gray-300 font-medium pb-1">Blog</a></li>
+                </ul>
+                <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </nav>
+            <div id="mobile-menu" class="hidden md:hidden">
+                <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <li><a href="index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-[#ff7f50] hover:bg-[#374151]">About Us</a></li>
+                    <li><a href="index.html#courses" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-[#ff7f50] hover:bg-[#374151]">Courses</a></li>
+                    <li><a href="index.html#blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-[#ff7f50] hover:bg-[#374151]">Blog</a></li>
+                </ul>
+            </div>
+        </header>
+        <main class="container mx-auto px-6 py-12">
+            <div class="content-wrapper">
+                <section class="text-center pt-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Cloud & DevOps Professional Program</h1>
+                    <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">Build, automate, and manage modern infrastructure with leading Cloud and DevOps technologies.</p>
+                </section>
+                <div class="max-w-4xl mx-auto space-y-8 px-8 pb-12">
+                    <section class="content-section p-8 rounded-lg shadow-lg bg-gray-900/50 mt-12">
+                        <h2 class="text-2xl font-bold text-white mb-4">Why Learn Cloud & DevOps?</h2>
+                        <p class="text-gray-300">Cloud computing and DevOps have revolutionized how software is built and deployed. Businesses rely on cloud platforms for scalability and flexibility, while DevOps practices accelerate development and improve reliability. Professionals skilled in both domains are among the most sought-after in the tech industry, responsible for architecting and automating the backbone of modern applications.</p>
+                    </section>
+                    <section class="content-section p-8 rounded-lg shadow-lg bg-gray-900/50">
+                        <h2 class="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-4">Course Curriculum (6 Months)</h2>
+                        <div class="space-y-12">
+                            <!-- Part 1 -->
+                            <div>
+                                <h3 class="text-2xl font-semibold text-[#ff7f50] mb-6">Part 1: Cloud Infrastructure Mastery (Months 1-2)</h3>
+                                <ul class="space-y-4">
+                                    <li><b>Month 1: AWS Core Services & Networking</b><p class="topic-description">In-depth AWS IAM, advanced VPC design, and mastery of EC2, load balancing, and S3 for scalable storage.</p></li>
+                                    <li><b>Month 2: Serverless, Databases & Monitoring</b><p class="topic-description">Introduction to Serverless with AWS Lambda, managed databases with RDS, and setting up monitoring with CloudWatch, Prometheus & Grafana.</p></li>
+                                </ul>
+                            </div>
+                            <!-- Part 2 -->
+                            <div>
+                                <h3 class="text-2xl font-semibold text-[#ff7f50] mb-6">Part 2: The DevOps & Automation Engine (Months 3-4)</h3>
+                                <ul class="space-y-4">
+                                    <li><b>Month 3: Deep Dive into Containerization</b><p class="topic-description">Advanced Docker concepts and a deep dive into Kubernetes architecture, including Deployments, Services, and Persistent Volumes.</p></li>
+                                    <li><b>Month 4: The Automated Pipeline</b><p class="topic-description">Mastering Jenkins for CI/CD and in-depth Infrastructure as Code (IaC) with Terraform to manage cloud resources reliably.</p></li>
+                                </ul>
+                            </div>
+                            <!-- Part 3 -->
+                            <div>
+                                <h3 class="text-2xl font-semibold text-[#ff7f50] mb-6">Part 3: Advanced Practices & Capstone (Months 5-6)</h3>
+                                <ul class="space-y-4">
+                                    <li><b>Month 5: Configuration Management & Security</b><p class="topic-description">Automate server configuration with Ansible and integrate security scanning into your CI/CD pipeline (DevSecOps).</p></li>
+                                    <li><b>Month 6: Capstone: Production-Grade Pipeline</b><p class="topic-description">Build an end-to-end project using Terraform to provision a Kubernetes cluster on AWS (EKS) and Jenkins to automatically deploy a containerized application with zero downtime.</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content-section p-8 rounded-lg shadow-lg bg-gray-900/50">
+                         <h2 class="text-3xl font-bold text-white mb-6 border-b border-gray-600 pb-4">Tools You Will Master</h2>
+                         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-center">
+                            <div class="tool-card p-4 rounded-lg flex flex-col items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" class="w-20 h-20 object-contain">
+                                <p class="mt-2 text-gray-800 font-semibold">AWS</p>
+                            </div>
+                            <div class="tool-card p-4 rounded-lg flex flex-col items-center justify-center">
+                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/docker.svg" alt="Docker" class="w-20 h-20 object-contain">
+                                <p class="mt-2 text-gray-800 font-semibold">Docker</p>
+                            </div>
+                            <div class="tool-card p-4 rounded-lg flex flex-col items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg" alt="Kubernetes" class="w-16 h-16 object-contain">
+                                <p class="mt-2 text-gray-800 font-semibold">Kubernetes</p>
+                            </div>
+                            <div class="tool-card p-4 rounded-lg flex flex-col items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg" alt="Jenkins" class="w-16 h-16 object-contain">
+                                <p class="mt-2 text-gray-800 font-semibold">Jenkins</p>
+                            </div>
+                            <div class="tool-card p-4 rounded-lg flex flex-col items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Terraform_Logo.svg" alt="Terraform" class="w-16 h-16 object-contain">
+                                <p class="mt-2 text-gray-800 font-semibold">Terraform</p>
+                            </div>
+                            <div class="tool-card p-4 rounded-lg flex flex-col items-center justify-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Ansible_logo.svg" alt="Ansible" class="w-16 h-16 object-contain">
+                                <p class="mt-2 text-gray-800 font-semibold">Ansible</p>
+                            </div>
+                         </div>
+                    </section>
+                    
+                     <section class="text-center py-16">
+                         <h2 class="text-3xl font-bold text-white mb-4">Ready to Build the Future of Tech?</h2>
+                         <a href="index.html#contact" class="inline-block bg-[#ff7f50] text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-opacity-90 transition-colors duration-300">Enroll Now</a>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="col-span-1 md:col-span-2">
+                        <div class="flex items-center mb-4">
+                            <img src="logo.png" alt="Agnidhra Technologies Logo" class="w-10 h-10 rounded-full mr-3">
+                            <span class="text-2xl font-bold">Agnidhra Technologies</span>
+                        </div>
+                        <p class="text-gray-400">Empowering the next wave of tech leaders with practical, hands-on training in high-demand skills.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html#about" class="footer-link">About Us</a></li>
+                            <li><a href="index.html#courses" class="footer-link">All Courses</a></li>
+                            <li><a href="index.html#faq" class="footer-link">FAQ</a></li>
+                            <li><a href="index.html#contact" class="footer-link">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Connect</h4>
+                        <ul class="space-y-2 mb-6">
+                            <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
+                            <li><a href="disclaimer.html" class="footer-link">Disclaimer</a></li>
+                        </ul>
+                        <div class="flex space-x-4">
+                            <a href="#" class="footer-link" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                            <a href="#" class="footer-link" aria-label="YouTube"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
+                            <a href="#" class="footer-link" aria-label="Instagram"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.947s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 border-t border-gray-700 pt-8 text-center text-gray-500">
+                    <p>&copy; 2025 Agnidhra Technologies. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            const mainContent = document.getElementById('main-content');
+            setTimeout(() => {
+                loader.classList.add('hidden');
+                mainContent.style.opacity = 1;
+            }, 1500);
+
+            document.getElementById('mobile-menu-button').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+        });
+    </script>
+</body>
+</html>
+
